@@ -1,5 +1,5 @@
 body {
-    font-family: Inter;
+    font-family: Inter, Arial, sans-serif;
     font-weight: 400;
     margin: 0;
 }
@@ -12,16 +12,33 @@ body {
     align-items: center;
     padding: 20px;
     text-align: center;
+    overflow: hidden;
+    position: relative;
 }
-#landing-hero > h1 {
+#landing-hero h3 {
     margin: 0;
-    font-weight: bold;
-    font-size: 60px;
+}
+#landing-hero img {
+    height: 100%;
+}
+#landing-hero .text {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 20px;
+}
+
+h1 {
+    margin: 20px 0 20px 0;
+}
+h2 {
+    margin: 20px 0 20px 0;
+}
+h3 {
+    margin: 20px 0 20px 0;
 }
 
 .custom-shape-divider-top-1671229258 {
-    position: absolute;
-    top: calc(100vh - 1px);
+    top: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -32,15 +49,38 @@ body {
 .custom-shape-divider-top-1671229258 svg {
     position: relative;
     display: block;
-    width: calc(100% + 1.3px);
+    width: 100%;
     height: 78px;
 }
 .custom-shape-divider-top-1671229258 .shape-fill {
     fill: #FFFFFF;
 }
 
+.custom-shape-divider-bottom-1672221905 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+.custom-shape-divider-bottom-1672221905 svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 79px;
+}
+.custom-shape-divider-bottom-1672221905 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.svg-wrapper {
+    background-color: #4274d0;
+    overflow: hidden;
+}
+
 @media screen and (max-width: 530px) {
-    #landing-hero > h1 {
+    #landing-hero h1 {
         font-size: 30px;
     }
     .custom-shape-divider-top-1671229258 {
@@ -49,14 +89,19 @@ body {
     .custom-shape-divider-top-1671229258 svg {
         width: 150%;
     }
+    .custom-shape-divider-bottom-1672221905 {
+        width: 150%;
+    }
+    .custom-shape-divider-bottom-1672221905 svg {
+        width: 150%;
+    }
 }
 
 #start {
     background-color: #4274d0;
     padding-top: 100px;
-    padding-bottom: 30px;
+    padding-bottom: 100px;
     color: #f6f6f6;
-    overflow: hidden; !important;
 }
 
 #benefits {
@@ -84,4 +129,116 @@ body {
     #benefits {
         grid-template-columns: none;
     }
+}
+
+#break1 {
+    display: none;
+}
+#break2 {
+    display: none;
+}
+@media screen and (max-width: 970px) {
+    #break1 {
+        display: unset;
+    }
+    #break2 {
+        display: unset;
+    }
+}
+
+#documentation {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#documentation ol {
+    margin: 0;
+    padding-left: 30px;
+}
+#documentation h2 {
+    margin-top: 40px;
+}
+
+#chapters li {
+    cursor: pointer;
+}
+
+.bi.hide {
+    display: none;
+}
+
+.wfo.code.block.black.relative {
+    position: relative;
+    border-top-right-radius: 18px;
+    min-height: 33px;
+}
+
+.wfo.absolute.top.right.button.small.black.copy {
+    margin: 5px;
+    padding: 5px 7px 5px 7px;
+    border-radius: 17px;
+    background-color: rgba(157, 157, 157, 0.75);
+}
+
+.wfo.padding.sides.standard.showcase {
+    border: grey solid 2px;
+    border-radius: 10px;
+}
+.wfo.padding.sides.standard.showcase > p {
+    border-left: grey solid 2px;
+    border-right: grey solid 2px;
+    margin: 0;
+}
+
+.wfo.margin.sides.standard.showcase {
+    border: grey solid 2px;
+    border-radius: 10px;
+}
+
+.wfo.text.center.showcase {
+    border: grey solid 2px;
+    border-radius: 10px;
+}
+
+.absolute.corner.showcase {
+    min-height: 70px;
+    border: grey solid 2px;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.absolute.corner.showcase > div {
+    padding: 5px;
+}
+
+.underline.showcase > p {
+    margin: 0;
+}
+
+.showcase.dark {
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.code.showcase.dark > div {
+    margin-top: 10px;
+}
+.code.showcase.light > div {
+    margin-top: 10px;
+}
+
+.tab.showcase > .wfo.tab {
+    background-color: #bcbcbc;
+}
+.showcase.dark.panel {
+    padding-top: 1px;
+}
+
+.showcase.badge span {
+    margin-top: 10px;
+}
+.showcase.dark.badge {
+    padding-top: 0;
+    margin-bottom: 0;
 }

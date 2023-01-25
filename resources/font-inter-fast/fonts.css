@@ -1,0 +1,40 @@
+/*Inter*/
+
+@font-face { /*Regular*/
+    font-family: Inter;
+    font-style:  normal;
+    font-weight: 400;
+    src: url(Inter-Regular.otf);
+}
+@font-face { /*Italic*/
+    font-family: Inter;
+    font-style:  italic;
+    font-weight: 400;
+    src: url(Inter-Italic.otf);
+}
+@font-face { /*SemiBold*/
+    font-family: Inter;
+    font-style:  normal;
+    font-weight: 600;
+    src: url(Inter-SemiBold.otf);
+}
+@font-face { /*SemiBold*/
+    font-family: Inter;
+    font-style:  italic;
+    font-weight: 600;
+    src: url(Inter-SemiBoldItalic.otf);
+}
+@font-face { /*Bold*/
+    font-family: Inter;
+    font-style:  normal;
+    font-weight: 700;
+    src: url(Inter-Bold.otf);
+}
+@font-face { /*Bold*/
+    font-family: Inter;
+    font-style:  italic;
+    font-weight: 700;
+    src: url(Inter-BoldItalic.otf);
+}
+
+/*???*/
