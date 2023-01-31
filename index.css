@@ -20,6 +20,8 @@ body {
 }
 #landing-hero img {
     height: 100%;
+    position: absolute;
+    scale: 0.75;
 }
 #landing-hero .text {
     position: absolute;
