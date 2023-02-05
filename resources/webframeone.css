@@ -8,6 +8,9 @@
 .wfo.text.center {
     text-align: center;
 }
+.wfo.text.block {
+    text-align: justify;
+}
 
 .wfo.underline {
     text-decoration: underline currentColor;
@@ -180,32 +183,45 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
-.wfo.button.small.white {
+.wfo.button {
+    background-color: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    border: solid 2px rgba(255, 255, 255, 0.23);
+    border-radius: 50px;
+    padding: 9px 9px 9px 9px;
+    transition: .2s;
+    display: inline-block;
+    text-align: center;
+    min-width: 30px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.wfo.button.white {
     background-color: rgba(255, 255, 255, 0.25);
     border: solid 2px rgba(255, 255, 255, 0.23);
 }
-.wfo.button.small.white:hover {
+.wfo.button.white:hover {
     background-color: rgba(255, 255, 255, 0.32);
 }
-.wfo.button.small.whiter {
+.wfo.button.whiter {
     background-color: rgba(255, 255, 255, 0.57);
     border: solid 2px rgba(255, 255, 255, 0.47);
 }
-.wfo.button.small.whiter:hover {
+.wfo.button.whiter:hover {
     background-color: rgba(255, 255, 255, 0.64);
 }
-.wfo.button.small.black {
+.wfo.button.black {
     background-color: rgba(0, 0, 0, 0.17);
     border: solid 2px rgba(0, 0, 0, 0.34);
 }
-.wfo.button.small.black:hover {
+.wfo.button.black:hover {
     background-color: rgba(0, 0, 0, 0.24);
 }
-.wfo.button.small.blacker {
+.wfo.button.blacker {
     background-color: rgba(88, 88, 88, 0.67);
     border: solid 2px rgba(0, 0, 0, 0.34);
 }
-.wfo.button.small.blacker:hover {
+.wfo.button.blacker:hover {
     background-color: rgba(88, 88, 88, 0.74);
 }
 
@@ -219,11 +235,9 @@
 }
 .wfo.expand.content {
     display: none;
-    margin-bottom: 20px;
 }
 .wfo.expand.toggle {
     cursor: pointer;
-    margin-bottom: 20px;
 }
 .wfo.expand.content.visible {
     display: block;
