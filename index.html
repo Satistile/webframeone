@@ -48,7 +48,7 @@
     </div>
     <div id="start" class="wfo padding sides standard">
         <h1>About <span class="wfo comment white">web:</span>frameone:</h1>
-        <div id="1" class="wfo panel white semi-bold shadow">
+        <div class="wfo panel white semi-bold text block shadow">
             <span class="wfo comment">web:</span>frameone is a little CSS Framework that have a modern design and is easy to use. The whole Framework is developed by a german developer called Satistile. All properties of this Framework are optimized to work perfectly with a Font called Inter. But more about that topic is in the documentation. The Framework will work with other fonts, but perhaps it doesn't fit as anticipated. We hope, <span class="wfo comment">web:</span>frameone is helpful.
         </div>
         <h1>Benefits:</h1>
@@ -83,7 +83,7 @@
             </div>
         </div>
         <h1>How to use:</h1>
-        <div class="wfo panel white shadow">
+        <div class="wfo panel white semi-bold shadow">
             You can use <span class="wfo comment">web:</span>frameone in a few different ways.<br>
             When you want to use the newest Version of <span class="wfo comment">web:</span>frameone, you must use <code class="wfo code white">&lt;link rel="stylesheet" href="https://satistile.github.io/<br id="break1">webframeone/resources/webframeone.css"&gt;</code>.<br>
             When you want to use a specific full release of <span class="wfo comment">web:</span>frameone, you must use <code class="wfo code white">[insert link here]</code>.<br>
@@ -109,6 +109,8 @@
                 <li onclick="wfoScroll('#text-styling-and-formatting')">Text styling & formatting</li>
                 <li onclick="wfoScroll('#panels-and-badges')">Panels & badges</li>
                 <li onclick="wfoScroll('#buttons')">Buttons</li>
+                <li onclick="wfoScroll('#helpful-js')">Helpful JavaScript</li>
+                <li onclick="wfoScroll('#experimental')">Experimental features</li>
             </ol>
         </div>
 
@@ -119,7 +121,7 @@
 
         <h2 id="basic-layouts-and-alignments">2. Basic layouts & alignments:</h2>
         <h3>Standard side padding:</h3>
-        <div class="wfo expand wrapper">
+        <div class="wfo expand wrapper doc">
             <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
                     <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
@@ -149,7 +151,7 @@
             </div>
         </div>
         <h3>Standard side margin:</h3>
-        <div class="wfo expand wrapper">
+        <div class="wfo expand wrapper doc">
             <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
                     <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
@@ -179,7 +181,7 @@
             </div>
         </div>
         <h3>Centered text align:</h3>
-        <div class="wfo expand wrapper">
+        <div class="wfo expand wrapper doc">
             <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
                     <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
@@ -208,8 +210,38 @@
                 This is a text with a centered alignment. It can be used on every element supporting text-align: center.
             </div>
         </div>
+        <h3>Block text align:</h3>
+        <div class="wfo expand wrapper doc">
+            <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
+                    <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
+                </svg>
+            </button>
+            <span class="wfo badge black">CSS</span>
+            <div class="wfo expand content">
+                <div class="wfo code block black relative">
+                    <div class="wfo absolute top right button small black copy" title="Copy code" onclick="copy(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg hide" viewBox="0 0 16 15">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                        </svg>
+                    </div>
+                    <code>
+&lt;div class="wfo text block"&gt;<br>
+    <span class="wfo tab"></span>This is a text with a block alignment. It can be used on every element supporting text-align: justify.<br>
+&lt;/div&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="wfo text block showcase">
+                This is a text with a block alignment. It can be used on every element supporting text-align: justify.
+            </div>
+        </div>
         <h3>Display absolute corner alignments:</h3>
-        <div class="wfo expand wrapper">
+        <div class="wfo expand wrapper doc">
             <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
                     <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
@@ -261,7 +293,7 @@
 
         <h2 id="text-styling-and-formatting">3. Text styling & formatting:</h2>
         <h3>Underlines:</h3>
-        <div class="wfo expand wrapper">
+        <div class="wfo expand wrapper doc">
             <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
                     <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
@@ -301,7 +333,7 @@
             </div>
         </div>
         <h3>Font weights:</h3>
-        <div class="wfo expand wrapper">
+        <div class="wfo expand wrapper doc">
             <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
                     <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
@@ -331,7 +363,7 @@
             </div>
         </div>
         <h3>Comment:</h3>
-        <div class="wfo expand wrapper">
+        <div class="wfo expand wrapper doc">
             <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
                     <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
@@ -359,7 +391,7 @@
             </div>
         </div>
         <h3>Tab:</h3>
-        <div class="wfo expand wrapper">
+        <div class="wfo expand wrapper doc">
             <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
                     <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
@@ -387,7 +419,7 @@
             </div>
         </div>
         <h3>Code:</h3>
-        <div class="wfo expand wrapper">
+        <div class="wfo expand wrapper doc">
             <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
                     <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
@@ -436,7 +468,7 @@
 
         <h2 id="panels-and-badges">4. Panels & badges:</h2>
         <h3>Standard Panel:</h3>
-        <div class="wfo expand wrapper">
+        <div class="wfo expand wrapper doc">
             <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
                     <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
@@ -475,7 +507,7 @@
             </div>
         </div>
         <h3>Standard Badge:</h3>
-        <div class="wfo expand wrapper">
+        <div class="wfo expand wrapper doc">
             <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
                     <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
@@ -514,7 +546,7 @@
 
         <h2 id="buttons">5. Buttons:</h2>
         <h3>Small Button:</h3>
-        <div class="wfo expand wrapper">
+        <div class="wfo expand wrapper doc">
             <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
                     <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
@@ -548,6 +580,128 @@
                 </div>
                 <span class="wfo button small black">This is a black small button.</span><br>
                 <span class="wfo button small blacker">This is a blacker small button.</span>
+            </div>
+        </div>
+        <h3>Normal Button:</h3>
+        <div class="wfo expand wrapper doc">
+            <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
+                    <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
+                </svg>
+            </button>
+            <span class="wfo badge black">CSS</span>
+            <div class="wfo expand content">
+                <div class="wfo code block black relative">
+                    <div class="wfo absolute top right button small black copy" title="Copy code" onclick="copy(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg hide" viewBox="0 0 16 15">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                        </svg>
+                    </div>
+                    <code>
+&lt;span class="wfo button white"&gt;This is a white small.&lt;/span&gt;<br>
+&lt;span class="wfo button small whiter"&gt;This is a whiter button.&lt;/span&gt;<br>
+<br>
+&lt;span class="wfo button black"&gt;This is a black button.&lt;/span&gt;<br>
+&lt;span class="wfo button blacker"&gt;This is a blacker button.&lt;/span&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="showcase badge">
+                <div class="showcase dark badge">
+                    <span class="wfo button white">This is a white button.</span><br>
+                    <span class="wfo button whiter">This is a whiter button.</span>
+                </div>
+                <span class="wfo button black">This is a black button.</span><br>
+                <span class="wfo button blacker">This is a blacker button.</span>
+            </div>
+        </div>
+
+        <h2 id="helpful-js">Helpful JavaScript:</h2>
+        <h3>Scroll function:</h3>
+        <div class="wfo expand wrapper doc">
+            <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
+                    <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
+                </svg>
+            </button>
+            <span class="wfo badge black">JS</span>
+            <div class="wfo expand content">
+                <div class="wfo code block black relative">
+                    <div class="wfo absolute top right button small black copy" title="Copy code" onclick="copy(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg hide" viewBox="0 0 16 15">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                        </svg>
+                    </div>
+                    <code>
+&lt;div class="wfo button small black" onclick="wfoScroll('#explaination')"&gt;<br>
+    <span class="wfo tab"></span>Scroll to the explanation<br>
+&lt;/div&gt;<br>
+&lt;div id="explanation"&gt;<br>
+    <span class="wfo tab"></span>When you use the function wfoScroll() and enter the element to scroll to into the brackets, the page scrolls to this element.<br>
+&lt;/div&gt;
+                    </code>
+                </div>
+            </div>
+            <div>
+                <div class="wfo button small black" onclick="wfoScroll('#explanation')">
+                    Scroll to the explanation
+                </div>
+                <div id="explanation">
+                    When you use the function wfoScroll() and enter the element to scroll to into the brackets, the page scrolls to this element.
+                </div>
+            </div>
+        </div>
+
+        <h2 id="experimental">Experimental Features:</h2>
+        <h3>Expander:</h3>
+        <div class="wfo expand wrapper doc">
+            <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
+                    <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
+                </svg>
+            </button>
+            <span class="wfo badge black">CSS</span>
+            <span class="wfo badge black">JS</span>
+            <div class="wfo expand content">
+                <div class="wfo code block black relative">
+                    <div class="wfo absolute top right button small black copy" title="Copy code" onclick="copy(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg hide" viewBox="0 0 16 15">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                        </svg>
+                    </div>
+                    <code>
+&lt;div class="wfo expand wrapper"&gt;<br>
+    <span class="wfo tab"></span>&lt;div class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)"&gt;<br>
+        <span class="wfo tab"></span><span class="wfo tab"></span>This is the expand button.<br>
+    <span class="wfo tab"></span>&lt;/div&gt;<br>
+    <span class="wfo tab"></span>&lt;div class"wfo expand content"&gt;<br>
+        <span class="wfo tab"></span><span class="wfo tab"></span>This is the expanding content.<br>
+    <span class="wfo tab"></span>&lt;/div&gt;<br>
+&lt;/div&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="expand showcase">
+                <div class="wfo expand wrapper">
+                    <div class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)">
+                        This is the expand button.
+                    </div>
+                    <div class="wfo expand content">
+                        This is the expanding content.
+                    </div>
+                </div>
             </div>
         </div>
     </div>
