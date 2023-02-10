@@ -109,6 +109,8 @@
                 <li onclick="wfoScroll('#text-styling-and-formatting')">Text styling & formatting</li>
                 <li onclick="wfoScroll('#panels-and-badges')">Panels & badges</li>
                 <li onclick="wfoScroll('#buttons')">Buttons</li>
+                <li onclick="wfoScroll('#input-fields')">Input fields</li>
+                <li onclick="wfoScroll('#css-effects')">CSS effects</li>
                 <li onclick="wfoScroll('#helpful-js')">Helpful JavaScript</li>
                 <li onclick="wfoScroll('#experimental')">Experimental features</li>
             </ol>
@@ -617,6 +619,243 @@
                 </div>
                 <span class="wfo button black">This is a black button.</span><br>
                 <span class="wfo button blacker">This is a blacker button.</span>
+            </div>
+        </div>
+
+        <h2 id="input-fields">6. Input fields:</h2>
+        <h3>Normal text input:</h3>
+        <div class="wfo expand wrapper doc">
+            <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
+                    <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
+                </svg>
+            </button>
+            <span class="wfo badge black">CSS</span>
+            <div class="wfo expand content">
+                <div class="wfo code block black relative">
+                    <div class="wfo absolute top right button small black copy" title="Copy code" onclick="copy(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg hide" viewBox="0 0 16 15">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                        </svg>
+                    </div>
+                    <code>
+&lt;input type="text" class="wfo input text white" placeholder="This is a white text input"&gt;<br>
+&lt;input type="text" class="wfo input text black" placeholder="This is a black text input"&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="showcase badge">
+                <div class="showcase dark badge">
+                    <input type="text" class="wfo input text white" placeholder="This is a white text input">
+                </div>
+                <input type="text" class="wfo input text black" placeholder="This is a black text input">
+            </div>
+        </div>
+        <h3>Rounded text input:</h3>
+        <div class="wfo expand wrapper doc">
+            <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
+                    <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
+                </svg>
+            </button>
+            <span class="wfo badge black">CSS</span>
+            <div class="wfo expand content">
+                <div class="wfo code block black relative">
+                    <div class="wfo absolute top right button small black copy" title="Copy code" onclick="copy(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg hide" viewBox="0 0 16 15">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                        </svg>
+                    </div>
+                    <code>
+&lt;input type="text" class="wfo input text rounded white" placeholder="This is a white text input"&gt;<br>
+&lt;input type="text" class="wfo input text rounded black" placeholder="This is a black text input"&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="showcase badge">
+                <div class="showcase dark badge">
+                    <input type="text" class="wfo input text rounded white" placeholder="This is a white text input">
+                </div>
+                <input type="text" class="wfo input text rounded black" placeholder="This is a black text input">
+            </div>
+        </div>
+        <h3>Normal dropdown input:</h3>
+        <div class="wfo expand wrapper doc">
+            <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
+                    <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
+                </svg>
+            </button>
+            <span class="wfo badge black">CSS</span>
+            <div class="wfo expand content">
+                <div class="wfo code block black relative">
+                    <div class="wfo absolute top right button small black copy" title="Copy code" onclick="copy(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg hide" viewBox="0 0 16 15">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                        </svg>
+                    </div>
+                    <code>
+&lt;select class="wfo input dropdown white" name="dropdown white"&gt;<br>
+    <span class="wfo tab"></span>&lt;option value=""&gt;This is a normal dropdown input&lt;/option&gt;<br>
+    <span class="wfo tab"></span>&lt;option value="Option 1"&gt;Option 1&lt;/option&gt;<br>
+    <span class="wfo tab"></span>&lt;option value="Option 2"&gt;Option 2&lt;/option&gt;<br>
+&lt;/select&gt;<br>
+<br>
+&lt;select class="wfo input dropdown black" name="dropdown black"&gt;<br>
+    <span class="wfo tab"></span>&lt;option value=""&gt;This is a normal dropdown input&lt;/option&gt;<br>
+    <span class="wfo tab"></span>&lt;option value="Option 1"&gt;Option 1&lt;/option&gt;<br>
+    <span class="wfo tab"></span>&lt;option value="Option 2"&gt;Option 2&lt;/option&gt;<br>
+&lt;/select&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="showcase badge">
+                <div class="showcase dark badge">
+                    <select class="wfo input dropdown white" name="dropdown white">
+                        <option value="">This is a normal dropdown input</option>
+                        <option value="Option 1">Option 1</option>
+                        <option value="Option 2">Option 2</option>
+                    </select>
+                </div>
+                <select class="wfo input dropdown black" name="dropdown black">
+                    <option value="">This is a normal dropdown input</option>
+                    <option value="Option 1">Option 1</option>
+                    <option value="Option 2">Option 2</option>
+                </select>
+            </div>
+        </div>
+        <h3>Rounded dropdown input:</h3>
+        <div class="wfo expand wrapper doc">
+            <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
+                    <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
+                </svg>
+            </button>
+            <span class="wfo badge black">CSS</span>
+            <div class="wfo expand content">
+                <div class="wfo code block black relative">
+                    <div class="wfo absolute top right button small black copy" title="Copy code" onclick="copy(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg hide" viewBox="0 0 16 15">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                        </svg>
+                    </div>
+                    <code>
+                        &lt;select class="wfo input dropdown rounded white" name="rounded dropdown white"&gt;<br>
+                        <span class="wfo tab"></span>&lt;option value=""&gt;This is a rounded dropdown input&lt;/option&gt;<br>
+                        <span class="wfo tab"></span>&lt;option value="Option 1"&gt;Option 1&lt;/option&gt;<br>
+                        <span class="wfo tab"></span>&lt;option value="Option 2"&gt;Option 2&lt;/option&gt;<br>
+                        &lt;/select&gt;<br>
+                        <br>
+                        &lt;select class="wfo input dropdown rounded black" name="rounded dropdown black"&gt;<br>
+                        <span class="wfo tab"></span>&lt;option value=""&gt;This is a rounded dropdown input&lt;/option&gt;<br>
+                        <span class="wfo tab"></span>&lt;option value="Option 1"&gt;Option 1&lt;/option&gt;<br>
+                        <span class="wfo tab"></span>&lt;option value="Option 2"&gt;Option 2&lt;/option&gt;<br>
+                        &lt;/select&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="showcase badge">
+                <div class="showcase dark badge">
+                    <select class="wfo input dropdown rounded white" name="rounded dropdown white">
+                        <option value="">This is a rounded dropdown input</option>
+                        <option value="Option 1">Option 1</option>
+                        <option value="Option 2">Option 2</option>
+                    </select>
+                </div>
+                <select class="wfo input dropdown rounded black" name="rounded dropdown black">
+                    <option value="">This is a rounded dropdown input</option>
+                    <option value="Option 1">Option 1</option>
+                    <option value="Option 2">Option 2</option>
+                </select>
+            </div>
+        </div>
+
+        <h2 id="css-effects">CSS effects:</h2>
+        <h3>Box shadow:</h3>
+        <div class="wfo expand wrapper doc">
+            <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
+                    <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
+                </svg>
+            </button>
+            <span class="wfo badge black">CSS</span>
+            <div class="wfo expand content">
+                <div class="wfo code block black relative">
+                    <div class="wfo absolute top right button small black copy" title="Copy code" onclick="copy(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg hide" viewBox="0 0 16 15">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                        </svg>
+                    </div>
+                    <code>
+&lt;div class="wfo shadow white"&gt;<br>
+    <span class="wfo tab"></span>This is the white shadow<br>
+&lt;/div&gt;<br>
+<br>
+&lt;div class="wfo shadow black"&gt;<br>
+    <span class="wfo tab"></span>This is the black shadow<br>
+&lt;/div&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="showcase badge">
+                <div class="showcase dark">
+                    <div class="wfo shadow white showcase">
+                        This is the white shadow
+                    </div>
+                </div>
+                <div class="wfo shadow black showcase">
+                    This is the black shadow
+                </div>
+            </div>
+        </div>
+        <h3>Y-Axis transform on hover:</h3>
+        <div class="wfo expand wrapper doc">
+            <button class="wfo expand toggle button small black" onclick="wfoExpandToggle(this)" title="Show code">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
+                    <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
+                </svg>
+            </button>
+            <span class="wfo badge black">CSS</span>
+            <div class="wfo expand content">
+                <div class="wfo code block black relative">
+                    <div class="wfo absolute top right button small black copy" title="Copy code" onclick="copy(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg hide" viewBox="0 0 16 15">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                        </svg>
+                    </div>
+                    <code>
+                        &lt;span class="wfo tab"&gt;&lt;/span&gt; <- this is a Tab. Of course without color in the framework.
+                    </code>
+                </div>
+            </div>
+            <div>
+                <div class="wfo button small black transform y-axis on-hover">
+                    This is a y-axis transformation on hover
+                </div>
             </div>
         </div>
 

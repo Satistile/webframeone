@@ -249,6 +249,12 @@ h3 {
 .showcase.badge span {
     margin-top: 10px;
 }
+.showcase.badge input {
+    margin-top: 10px;
+}
+.showcase.badge select {
+    margin-top: 10px;
+}
 .showcase.dark.badge {
     padding-top: 0;
     margin-bottom: 0;
@@ -265,4 +271,12 @@ h3 {
 }
 .wfo.expand.wrapper.doc > .wfo.expand.content {
     margin-bottom: 20px;
+}
+
+.shadow.white.showcase {
+    color: white;
+}
+.shadow.showcase {
+    padding: 5px;
+    border-radius: 5px;
 }
