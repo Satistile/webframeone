@@ -1,0 +1,273 @@
+<style>
+    body {
+        --clr-accent-magenta: #DF058D;
+        --clr-accent-blue: #0034FF;
+        --clr-accent-red: #FF001E;
+
+        --clr-background-white: rgba(255, 255, 255, 0.25);
+        --clr-background-whiter: rgba(255, 255, 255, 0.57);
+        --clr-background-black: rgba(0, 0, 0, 0.17);
+        --clr-background-blacker: rgba(88, 88, 88, 0.67);
+
+        --clr-background-white-hover: rgba(255, 255, 255, 0.32);
+        --clr-background-whiter-hover: rgba(255, 255, 255, 0.72);
+        --clr-background-black-hover: rgba(0, 0, 0, 0.24);
+        --clr-background-blacker-hover: rgba(88, 88, 88, 0.84);
+
+        --clr-border-white: rgba(255, 255, 255, 0.23);
+        --clr-border-whiter: rgba(255, 255, 255, 0.47);
+        --clr-border-black: rgba(0, 0, 0, 0.34);
+        --clr-border-blacker: rgba(0, 0, 0, 0.57);
+
+        --clr-background-black-navigation: #efefef;
+        --clr-background-white-navigation: #2e2e2e;
+        --clr-accent-black-navigation: #000;
+        --clr-accent-white-navigation: #e1e1e1;
+        font-family: Arial;
+    }
+    .wfo.navigation-bar.wrapper.pc {
+        background-color: var(--clr-background-black-navigation);
+        color: var(--clr-accent-black-navigation);
+        padding: 29px 5px 28px 5px;
+        border-bottom: 2px solid var(--clr-accent-black-navigation);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        z-index: 2;
+    }
+    .wfo.navigation-bar.wrapper.pc.black {
+        background-color: var(--clr-background-black-navigation);
+        color: var(--clr-accent-black-navigation);
+        border-bottom: 2px solid var(--clr-accent-black-navigation);
+    }
+    .wfo.navigation-bar.wrapper.pc.white {
+        background-color: var(--clr-background-white-navigation);
+        color: var(--clr-accent-white-navigation);
+        border-bottom: 2px solid var(--clr-accent-white-navigation);
+    }
+    .wfo.navigation-bar.title {
+        font-size: 35px;
+        margin: 0;
+        text-align: center;
+    }
+    .wfo.navigation-bar.element {
+        font-size: 20px;
+        margin-left: 25px;
+        transition: .2s;
+        cursor: pointer;
+        padding: 0 6px 0 6px;
+        color: var(--clr-accent-black-navigation);
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+    }
+    .wfo.navigation-bar.element.black {
+        color: var(--clr-accent-black-navigation);
+    }
+    .wfo.navigation-bar.element.white {
+        color: var(--clr-accent-white-navigation);
+    }
+    .wfo.navigation-bar.element:hover {
+        color: var(--clr-accent-black-navigation);
+        text-decoration: underline;
+    }
+    .wfo.navigation-bar.element.black:hover {
+        color: var(--clr-accent-black-navigation);
+    }
+    .wfo.navigation-bar.element.white:hover {
+        color: var(--clr-accent-white-navigation);
+    }
+    .wfo.navigation-bar.wrapper.mobile {
+        position: relative;
+    }
+    .wfo.navigation-bar.wrapper.mobile.responsive {
+        display: none;
+    }
+    .wfo.navigation-bar.top.mobile {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: var(--clr-background-black-navigation);
+        color: var(--clr-accent-black-navigation);
+        padding: 25px 5px 25px 5px;
+        border-bottom: 2px solid var(--clr-accent-black-navigation);
+        top: 0;
+        z-index: 2;
+    }
+    .wfo.navigation-bar.top.mobile.black {
+        background-color: var(--clr-background-black-navigation);
+        color: var(--clr-accent-black-navigation);
+        border-bottom: 2px solid var(--clr-accent-black-navigation);
+    }
+    .wfo.navigation-bar.top.mobile.white {
+        background-color: var(--clr-background-white-navigation);
+        color: var(--clr-accent-white-navigation);
+        border-bottom: 2px solid var(--clr-accent-white-navigation);
+    }
+    .wfo.navigation-bar.menu.mobile {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        background-color: var(--clr-background-black-navigation);
+        padding: 10px 0 10px 0;
+        opacity: 0;
+        transform: translateY(-100%);
+        transition: .2s;
+    }
+    .wfo.navigation-bar.menu.mobile.black {
+        background-color: var(--clr-background-black-navigation);
+    }
+    .wfo.navigation-bar.menu.mobile.white {
+        background-color: var(--clr-background-white-navigation);
+    }
+    .wfo.navigation-bar.menu.mobile.active {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    .wfo.navigation-bar.menu.mobile ul {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        list-style: none;
+    }
+    .wfo.navigation-bar.element.mobile {
+        font-size: 20px;
+        padding: 7px 0 7px 0;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .wfo.navigation-bar.element.mobile a {
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--clr-accent-black-navigation);
+    }
+    .wfo.navigation-bar.element.mobile.black a {
+        color: var(--clr-accent-black-navigation);
+    }
+    .wfo.navigation-bar.element.mobile.white a {
+        color: var(--clr-accent-white-navigation);
+    }
+    .wfo.navigation-bar.ham.icon {
+        cursor: pointer;
+        position: relative;
+        margin-left: 12px;
+        display: block;
+        width: 75px; height: 49px;
+    }
+    .wfo.navigation-bar.ham.bar {
+        position: absolute;
+        left:10px;
+        height: 4px; width: 55px;
+        background: var(--clr-accent-black-navigation); border-radius: 2px;
+        display: block;
+        transition: 0.2s;
+        -webkit-transition: 0.2s;
+        transform-origin: center;
+    }
+    .wfo.navigation-bar.ham.bar.black {
+        background: var(--clr-accent-black-navigation);
+    }
+    .wfo.navigation-bar.ham.bar.white {
+        background: var(--clr-accent-white-navigation);
+    }
+    .wfo.navigation-bar.ham.bar:nth-child(1) { top: 0; }
+    .wfo.navigation-bar.ham.bar:nth-child(2) { top: 12px; }
+    .wfo.navigation-bar.ham.bar:nth-child(3) { top: 24px; }
+    .wfo.navigation-bar.ham.icon.active .wfo.navigation-bar.ham.bar:nth-child(1) {
+        transform: translateY(12px) rotate(-45deg);
+    }
+    .wfo.navigation-bar.ham.icon.active .wfo.navigation-bar.ham.bar:nth-child(2) {
+        opacity: 0;
+    }
+    .wfo.navigation-bar.ham.icon.active .wfo.navigation-bar.ham.bar:nth-child(3) {
+        transform: translateY(-12px) rotate(45deg);
+    }
+    @media screen and (max-width: 1235px) {
+        .wfo.navigation-bar.wrapper.pc.responsive {
+            display: none;
+        }
+        .wfo.navigation-bar.wrapper.mobile.responsive {
+            display: block;
+        }
+    }
+
+    .wfo.navigation-dropdown.wrapper {
+        position: relative;
+    }
+    .wfo.navigation-dropdown.content {
+        position: absolute;
+        left: 0;
+        padding: 15px;
+        background-color: var(--clr-background-black-navigation);
+        border-radius: 16px;
+        display: none;
+    }
+    .wfo.navigation-dropdown.content.white {
+        background-color: var(--clr-background-white-navigation);
+        color: #efefef;
+    }
+    .wfo.navigation-dropdown.content.black {
+        background-color: var(--clr-background-black-navigation);
+        color: #000000;
+    }
+    .wfo.navigation-dropdown.wrapper:hover .wfo.navigation-dropdown.content {
+        display: block;
+    }
+</style>
+<script>
+    function wfoNavigationHamburgerTrigger(element) {
+        element.classList.toggle("active")
+        let firstParent = element.parentElement;
+        let secondParent = firstParent.parentElement;
+        secondParent.querySelector('.wfo.navigation-bar.menu.mobile').classList.toggle('active')
+        if (!secondParent.querySelector('.wfo.navigation-bar.menu.mobile').classList.contains('active')) {
+            setTimeout(function() {
+                secondParent.querySelector('.wfo.navigation-bar.menu.mobile').style.zIndex = "-1";
+            }, 200);
+        } else {
+            secondParent.querySelector('.wfo.navigation-bar.menu.mobile').style.zIndex = "1";
+        }
+    }
+</script>
+<h3>Responsive navigation bar:</h3>
+<nav class="wfo navigation-bar wrapper pc black responsive">
+    <h1 class="wfo navigation-bar title">Your Website name</h1>
+    <a class="wfo navigation-bar element black" href="#">Link 1</a>
+    <a class="wfo navigation-bar element black" href="#">Link 2</a>
+    <a class="wfo navigation-bar element black" href="#">Link 3</a>
+    <a class="wfo navigation-bar element black" href="#">Link 4</a>
+</nav>
+<nav class="wfo navigation-bar wrapper mobile responsive">
+    <div class="wfo navigation-bar top mobile black">
+        <h1 class="wfo navigation-bar title">Your Website name</h1>
+        <div class="wfo navigation-bar ham icon" onclick="wfoNavigationHamburgerTrigger(this)">
+            <span class="wfo navigation-bar ham bar black"></span>
+            <span class="wfo navigation-bar ham bar black"></span>
+            <span class="wfo navigation-bar ham bar black"></span>
+        </div>
+    </div>
+    <div class="wfo navigation-bar menu mobile black">
+        <ul>
+            <li class="wfo navigation-bar element mobile black">
+                <a href="#">Link 1</a>
+            </li>
+            <li class="wfo navigation-bar element mobile black">
+                <a href="#">Link 2</a>
+            </li>
+            <li class="wfo navigation-bar element mobile black">
+                <a href="#">Link 3</a>
+            </li>
+            <li class="wfo navigation-bar element mobile black">
+                <a href="#">Link 4</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<h3>Navigation dropdown:</h3>
+<div class="wfo navigation-dropdown wrapper s-margin">
+    <div class="wfo button small black">This is the dropdown trigger</div> <- This can be replaced by any other element
+    <div class="wfo navigation-dropdown content black">This is the black dropdown content</div>
+</div>
