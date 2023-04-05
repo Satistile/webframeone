@@ -600,6 +600,10 @@ body {
         transform: scale(1,1);
         opacity: 1;
     }
+    .wfo.nav>div:nth-child(2)>ul>li>div.active>* {
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out 0.3s;
+    }
 }
 
 .wfo.transform.y-axis.on-hover {
