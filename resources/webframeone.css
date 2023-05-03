@@ -8,6 +8,11 @@ body {
     --clr-background-black: rgba(0, 0, 0, 0.17);
     --clr-background-blacker: rgba(88, 88, 88, 0.67);
 
+    --clr-background-white-gradient: linear-gradient(355deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.57) 100%);
+    --clr-background-whiter-gradient: linear-gradient(355deg, rgba(255, 255, 255, 0.57) 0%, rgba(255, 255, 255, 0.72) 100%);
+    --clr-background-black-gradient: linear-gradient(175deg, rgba(0, 0, 0, 0.17) 0%, rgba(88, 88, 88, 0.67) 100%);
+    --clr-background-blacker-gradient: linear-gradient(175deg, rgba(88, 88, 88, 0.67) 0%, rgba(88, 88, 88, 0.84) 100%);
+
     --clr-background-white-hover: rgba(255, 255, 255, 0.32);
     --clr-background-whiter-hover: rgba(255, 255, 255, 0.72);
     --clr-background-black-hover: rgba(0, 0, 0, 0.24);
@@ -27,6 +32,10 @@ body {
 
     --clr-background-input-trigger-checked: #0fb328;
     --clr-border-input-trigger-checked: #095f16;
+}
+
+.scrollbar.round::-webkit-scrollbar-thumb {
+    border-radius: 50px;
 }
 
 .wfo.semi-bold {
@@ -168,17 +177,32 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
+.wfo.glass.panel {
+    background: var(--clr-background-white-gradient);
+}
 .wfo.panel.white {
     background-color: var(--clr-background-white);
+}
+.wfo.glass.panel.white {
+    background: var(--clr-background-white-gradient);
 }
 .wfo.panel.whiter {
     background-color: var(--clr-background-whiter);
 }
+.wfo.glass.panel.whiter {
+    background: var(--clr-background-whiter-gradient);
+}
 .wfo.panel.black {
     background-color: var(--clr-background-black);
 }
+.wfo.glass.panel.black {
+    background: var(--clr-background-black-gradient);
+}
 .wfo.panel.blacker {
     background-color: var(--clr-background-blacker);
+}
+.wfo.glass.panel.blacker {
+    background: var(--clr-background-blacker-gradient);
 }
 
 .wfo.badge {
@@ -302,6 +326,7 @@ body {
     border: solid 2px var(--clr-border-black);
     transition: .2s;
     outline: none;
+
 }
 .wfo.input.dropdown.rounded {
     border-radius: 50px;
@@ -737,4 +762,16 @@ body {
 }
 .wfo.border-expand.content.active {
     display: block;
+}
+
+.wfo.expand.content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 0.2s ease-in-out;
+}
+.wfo.expand.content.active {
+    grid-template-rows: 1fr;
+}
+.wfo.expand.content>div {
+    overflow: hidden;
 }

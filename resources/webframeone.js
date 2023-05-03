@@ -2,6 +2,10 @@ function wfoScroll(element) {
     document.querySelector(element).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 }
 
+function wfoExpandToggle(element) {
+    element.parentElement.querySelector(".wfo.expand.content").classList.toggle("active");
+}
+
 function wfoBorderExpandToggle(toggleElement) {
     toggleElement.parentElement.classList.toggle('active');
     let parent = toggleElement.parentElement;
