@@ -506,6 +506,45 @@
                 <div class="wfo panel blacker showcase">This is a blacker panel.</div>
             </div>
         </div>
+        <h3>Glass Panel:</h3>
+        <div class="wfo border-expand wrapper doc">
+            <button class="wfo border-expand toggle button small black" onclick="wfoBorderExpandToggle(this)" title="Show code">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
+                    <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
+                </svg>
+            </button>
+            <span class="wfo badge black">CSS</span>
+            <div class="wfo border-expand content">
+                <div class="wfo code block black relative">
+                    <div class="wfo absolute top right button small black copy" title="Copy code" onclick="copy(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg hide" viewBox="0 0 16 15">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                        </svg>
+                    </div>
+                    <code>
+&lt;div class="wfo glass panel white"&gtThis is a white panel.&lt;/div&gt;<br>
+&lt;div class="wfo glass panel whiter"&gtThis is a whiter panel.&lt;/div&gt;<br>
+<br>
+&lt;div class="wfo glass panel black"&gtThis is a black panel.&lt;/div&gt;<br>
+&lt;div class="wfo glass panel blacker"&gtThis is a blacker panel.&lt;/div&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="showcase wrapper">
+                <div class="showcase wrapper dark" style="background-image: url('https://picsum.photos/id/84/1920/1080'); background-size: cover; background-position: center">
+                    <div class="wfo glass panel white showcase">This is a white glass panel.</div>
+                    <div class="wfo glass panel whiter showcase">This is a whiter glass panel.</div>
+                </div>
+                <div class="showcase wrapper" style="padding: 1px 10px 10px 10px; border-radius: 5px; background-image: url('https://picsum.photos/seed/picsum/1920/1080'); background-size: cover; background-position: center">
+                    <div class="wfo glass panel black showcase">This is a black glass panel.</div>
+                    <div class="wfo glass panel blacker showcase">This is a blacker glass panel.</div>
+                </div>
+            </div>
+        </div>
         <h3>Standard Badge:</h3>
         <div class="wfo border-expand wrapper doc">
             <button class="wfo border-expand toggle button small black" onclick="wfoBorderExpandToggle(this)" title="Show code">
@@ -1350,6 +1389,44 @@ You can change the color mode with the function &lt;span class="wfo code black"&
         </div>
 
         <h2 id="experimental">11. Experimental Features:</h2>
+        <h3>Expander:</h3>
+        <div class="wfo border-expand wrapper doc">
+            <button class="wfo border-expand toggle button small black" onclick="wfoBorderExpandToggle(this)" title="Show code">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" stroke="currentColor" stroke-width=".3px" fill="currentColor" class="bi bi-code" viewBox="1 0 15 13">
+                    <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
+                </svg>
+            </button>
+            <span class="wfo badge black">CSS</span>
+            <span class="wfo badge black">JS</span>
+            <div class="wfo border-expand content">
+                <div class="wfo code block black relative">
+                    <div class="wfo absolute top right button small black copy" title="Copy code" onclick="copy(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg hide" viewBox="0 0 16 15">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                        </svg>
+                    </div>
+                    <code>
+
+                    </code>
+                </div>
+            </div>
+            <div class="expand showcase">
+                <div class="wfo border-expand wrapper">
+                    <div class="wfo expand parent">
+                        <button class="wfo button small black" onclick="wfoExpandToggle(this)">This is the expand button.</button>
+                        <div class="wfo expand content">
+                            <div>
+                                This is the expand content
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <h3>Border Expander:</h3>
         <div class="wfo border-expand wrapper doc">
             <button class="wfo border-expand toggle button small black" onclick="wfoBorderExpandToggle(this)" title="Show code">
