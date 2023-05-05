@@ -618,7 +618,10 @@ body {
         padding: 0 10%;
         transform: scale(0,1);
         transform-origin: right;
-        transition: transform 0.1ms 0.2s, opacity 0.2s ease-in-out;
+        transition: transform 0.1ms 0.35s, opacity 0.3s ease-in-out;
+    }
+    .wfo.nav>div:nth-child(2)>ul>li>div>* {
+        transition: opacity 0.2s ease-in-out;
     }
     .wfo.nav>div:nth-child(2)>ul>li>div.active {
         transition: transform 0.1ms, opacity 0.2s ease-in-out;
@@ -768,6 +771,7 @@ body {
     display: grid;
     grid-template-rows: 0fr;
     transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
 }
 .wfo.expand.content.active {
     grid-template-rows: 1fr;
