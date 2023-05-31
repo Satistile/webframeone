@@ -579,6 +579,7 @@ body {
         transform: scale(0,1);
         transform-origin: right;
         transition: transform 0.2s ease-in-out;
+        overflow: auto;
     }
     .wfo.nav.black>div:nth-child(2) {
         background-color: var(--clr-background-black-navigation);
