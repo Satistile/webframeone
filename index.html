@@ -30,11 +30,6 @@
 
     <link rel="icon" type="image/svg+xml" sizes="any" href="resources/images/webframeone.svg">
     <title>Home | web:frameone</title>
-    <script>
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',({ matches }) => {
-            document.getElementById("theme-switch").click();
-        });
-    </script>
 </head>
 <body>
     <nav class="wfo nav black sticky">
@@ -69,7 +64,7 @@
         </div>
         <div style="height: 30px">
             <label class="theme-switch">
-                <input id="theme-switch" type="checkbox" onchange="themeToggle()" checked>
+                <input id="theme-switch" type="checkbox" onclick="themeToggle()" checked>
                 <span class="theme-slider"></span>
             </label>
         </div>

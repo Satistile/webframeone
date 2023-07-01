@@ -26,3 +26,11 @@ function themeToggle() {
     wfoColorModeToggle();
     document.querySelector('body').classList.toggle('dark');
 }
+
+const theme = window.matchMedia('(prefers-color-scheme: dark)');
+if (theme) {
+    document.getElementById("theme-switch").click();
+}
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',({ matches }) => {
+    document.getElementById("theme-switch").click();
+});
