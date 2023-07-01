@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>White Navigation-bar Showcase | web:frameone</title>
+  <link rel="stylesheet" href="../webframeone.css">
+  <link rel="stylesheet" href="../font-inter-fast/fonts.css">
+  <script src="../webframeone.js"></script>
+  <meta name="theme-color" content="#4274d0" data-react-helmet="true">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="../images/webframeone.svg">
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: Inter;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+<nav class="wfo nav white">
+  <div>
+    Website
+  </div>
+  <div>
+    <ul>
+      <li><a href="#">link</a></li>
+      <li><a href="#">link</a></li>
+      <li><a href="#" onclick="wfoNavDropdownToggleOpen(this)">link</a>
+        <div>
+          <button onclick="wfoNavDropdownToggleClose(this)">
+            <span></span>
+            <span></span>
+          </button>
+          <h4>dropdown</h4>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div>
+    important
+  </div>
+  <button onclick="wfoNavActiveToggle(this)">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+</body>
+</html>
