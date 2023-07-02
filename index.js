@@ -27,7 +27,7 @@ function themeToggle() {
     document.querySelector('body').classList.toggle('dark');
 }
 
-const theme = window.matchMedia('(prefers-color-scheme: dark)');
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 if (theme) {
     document.getElementById("theme-switch").click();
 }
