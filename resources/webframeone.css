@@ -258,6 +258,7 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     appearance: none;
+    color: currentColor;
 }
 .wfo.button.white {
     background-color: var(--clr-background-white);
