@@ -23,7 +23,7 @@ function copy (element) {
     }, 2500);
 }
 function themeToggle() {
-    wfoColorModeToggle();
+    wfo.ColorModeToggle();
     document.querySelector('body').classList.toggle('dark');
 }
 
