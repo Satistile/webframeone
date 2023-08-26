@@ -5,8 +5,14 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="4.26667in" height="4.26667in"
      viewBox="0 0 1280 1280">
+  <defs>
+    <linearGradient id="gradient" gradientTransform="rotate(45)">
+      <stop class="stop1" offset="0%" stop-color="#4274d0"/>
+      <stop class="stop3" offset="100%" stop-color="#8825cb"/>
+    </linearGradient>
+  </defs>
   <path id="Auswahl"
-        fill="black" stroke="black" stroke-width="1"
+        fill="url(#gradient)" stroke="none" stroke-width="1"
         d="M 76.00,76.00
            C 76.00,76.00 1204.00,76.00 1204.00,76.00
              1204.00,76.00 1204.00,1204.00 1204.00,1204.00
