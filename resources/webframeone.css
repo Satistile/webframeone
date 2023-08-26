@@ -4,19 +4,13 @@ body {
     --clr-accent-red: #FF001E;
 
     --clr-background-white: rgba(255, 255, 255, 0.25);
-    --clr-background-whiter: rgba(255, 255, 255, 0.57);
     --clr-background-black: rgba(0, 0, 0, 0.17);
-    --clr-background-blacker: rgba(88, 88, 88, 0.67);
 
     --clr-background-white-gradient: linear-gradient(355deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.57) 100%);
-    --clr-background-whiter-gradient: linear-gradient(355deg, rgba(255, 255, 255, 0.57) 0%, rgba(255, 255, 255, 0.72) 100%);
     --clr-background-black-gradient: linear-gradient(175deg, rgba(0, 0, 0, 0.17) 0%, rgba(88, 88, 88, 0.67) 100%);
-    --clr-background-blacker-gradient: linear-gradient(175deg, rgba(88, 88, 88, 0.67) 0%, rgba(88, 88, 88, 0.84) 100%);
 
     --clr-background-white-hover: rgba(255, 255, 255, 0.32);
-    --clr-background-whiter-hover: rgba(255, 255, 255, 0.72);
     --clr-background-black-hover: rgba(0, 0, 0, 0.24);
-    --clr-background-blacker-hover: rgba(88, 88, 88, 0.84);
 
     --clr-border-white: rgba(255, 255, 255, 0.23);
     --clr-border-whiter: rgba(255, 255, 255, 0.47);
@@ -96,14 +90,8 @@ body {
 .wfo.shadow.white {
     box-shadow: 0 0 10px rgb(65, 65, 65);
 }
-.wfo.shadow.whiter {
-    box-shadow: 0 0 10px rgb(97, 97, 97);
-}
 .wfo.shadow.black {
-    box-shadow: 0 0 10px rgb(109, 109, 109);
-}
-.wfo.shadow.blacker {
-    box-shadow: 0 0 10px rgb(55, 55, 55);
+    box-shadow: 0 5px 15px rgb(155, 155, 155);
 }
 
 .wfo.code {
@@ -119,14 +107,8 @@ body {
 .wfo.code.white {
     background-color: var(--clr-background-white);
 }
-.wfo.code.whiter {
-    background-color: var(--clr-background-whiter);
-}
 .wfo.code.black {
     background-color: var(--clr-background-black);
-}
-.wfo.code.blacker {
-    background-color: var(--clr-background-blacker);
 }
 
 .wfo.padding.sides.standard {
@@ -188,23 +170,11 @@ body {
 .wfo.glass.panel.white {
     background: var(--clr-background-white-gradient);
 }
-.wfo.panel.whiter {
-    background-color: var(--clr-background-whiter);
-}
-.wfo.glass.panel.whiter {
-    background: var(--clr-background-whiter-gradient);
-}
 .wfo.panel.black {
-    background-color: var(--clr-background-black);
+    background-color: var(--clr-background-white);
 }
 .wfo.glass.panel.black {
     background: var(--clr-background-black-gradient);
-}
-.wfo.panel.blacker {
-    background-color: var(--clr-background-blacker);
-}
-.wfo.glass.panel.blacker {
-    background: var(--clr-background-blacker-gradient);
 }
 
 .wfo.badge {
@@ -221,14 +191,8 @@ body {
 .wfo.badge.white {
     background-color: var(--clr-background-white);
 }
-.wfo.badge.whiter {
-    background-color: var(--clr-background-whiter);
-}
 .wfo.badge.black {
     background-color: var(--clr-background-black);
-}
-.wfo.badge.blacker {
-    background-color: var(--clr-background-blacker);
 }
 
 .wfo.button.small {
@@ -267,26 +231,12 @@ body {
 .wfo.button.white:hover {
     background-color: var(--clr-background-white-hover);
 }
-.wfo.button.whiter {
-    background-color: var(--clr-background-whiter);
-    border: solid 2px var(--clr-border-whiter);
-}
-.wfo.button.whiter:hover {
-    background-color: var(--clr-background-whiter-hover);
-}
 .wfo.button.black {
     background-color: var(--clr-background-black);
     border: solid 2px var(--clr-border-black);
 }
 .wfo.button.black:hover {
     background-color: var(--clr-background-black-hover);
-}
-.wfo.button.blacker {
-    background-color: var(--clr-background-blacker);
-    border: solid 2px var(--clr-border-blacker);
-}
-.wfo.button.blacker:hover {
-    background-color: var(--clr-background-blacker-hover);
 }
 
 .wfo.input.text {
@@ -297,6 +247,7 @@ body {
     transition: .2s;
     outline: none;
     appearance: none;
+    height: 20px;
 }
 .wfo.input.text.rounded {
     border-radius: 50px;
@@ -306,6 +257,7 @@ body {
     font-size: 0.75em;
     padding: 3px 8px 3px 8px;
     border-radius: 50px;
+    height: 15px;
 }
 .wfo.input.text.black {
     border: solid 2px var(--clr-border-black);
@@ -330,7 +282,7 @@ body {
     border: solid 2px var(--clr-border-black);
     transition: .2s;
     outline: none;
-
+    font-size: 15px;
 }
 .wfo.input.dropdown.rounded {
     border-radius: 50px;
@@ -359,7 +311,7 @@ body {
 }
 
 .wfo.input.trigger {
-    height: 20px;
+    height: 30px;
     width: 50px;
     cursor: pointer;
     display: inline-block;
@@ -368,7 +320,7 @@ body {
     display: none;
 }
 .wfo.input.trigger-slider {
-    height: 18px;
+    height: 28px;
     width: 48px;
     border: 2px solid var(--clr-border-black);
     border-radius: 50px;
@@ -389,9 +341,9 @@ body {
 .wfo.input.trigger-slider::before {
     content: '';
     background-color: var(--clr-knob-input-trigger-black);
-    top: 3px;
-    left: 3px;
-    bottom: 3px;
+    top: 5px;
+    left: 5px;
+    bottom: 5px;
     right: 25px;
     position: absolute;
     border-radius: 50px;
@@ -408,8 +360,8 @@ body {
     border-color: var(--clr-border-input-trigger-checked);
 }
 .wfo.input.trigger>input:checked + .wfo.input.trigger-slider::before {
-    -ms-transform: translateX(22px);
-    transform: translateX(22px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
 }
 
 .wfo.nav {
@@ -687,17 +639,9 @@ body {
     background-color: var(--clr-background-white);
     animation-name: pulse-white;
 }
-.wfo.skeleton-placeholder.whiter {
-    background-color: var(--clr-background-whiter);
-    animation-name: pulse-whiter;
-}
 .wfo.skeleton-placeholder.black {
     background-color: var(--clr-background-black);
     animation-name: pulse-black;
-}
-.wfo.skeleton-placeholder.blacker {
-    background-color: var(--clr-background-blacker);
-    animation-name: pulse-blacker;
 }
 @keyframes pulse-white {
     0% {
@@ -711,14 +655,11 @@ body {
     }
 }
 @keyframes pulse-whiter {
-    0% {
-        background-color: var(--clr-background-whiter)
+    0%, 100% {
+        background-color: var(--clr-background-white)
     }
     50% {
-        background-color: var(--clr-background-whiter-hover)
-    }
-    100% {
-        background-color: var(--clr-background-whiter)
+        background-color: var(--clr-background-white-hover)
     }
 }
 @keyframes pulse-black {
@@ -733,14 +674,11 @@ body {
     }
 }
 @keyframes pulse-blacker {
-    0% {
-        background-color: var(--clr-background-blacker)
+    0%, 100% {
+        background-color: var(--clr-background-black)
     }
     50% {
-        background-color: var(--clr-background-blacker-hover)
-    }
-    100% {
-        background-color: var(--clr-background-blacker)
+        background-color: var(--clr-background-black-hover)
     }
 }
 

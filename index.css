@@ -82,6 +82,12 @@ a {
 .hide {
     display: none;
 }
+.wfo.black {
+    color: black;
+}
+.wfo.white {
+    color: white;
+}
 
 #hero {
     height: 70vh;
