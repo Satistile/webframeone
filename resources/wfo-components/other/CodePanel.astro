@@ -1,0 +1,29 @@
+---
+interface Props {
+    id: string;
+    class: string;
+}
+
+const { id, class:className } = Astro.props;
+---
+
+<div id={ id } class={ className }>
+    <slot />
+</div>
+<style>
+    div {
+        position: relative;
+        font-family: monospace;
+        overflow: auto;
+        padding: 16px;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        opacity: 0.8;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        div {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+</style>

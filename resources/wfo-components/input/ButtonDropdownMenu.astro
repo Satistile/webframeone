@@ -1,0 +1,53 @@
+---
+interface Props {
+    id: string;
+    class: string;
+    placeholder: string;
+}
+
+const { id, class:className, placeholder } = Astro.props;
+---
+
+<label id={ id } class={ className }>
+    <select>
+        <option value="" disabled selected style="display:none">{ placeholder }</option>
+        <slot />
+    </select>
+</label>
+<style>
+    select {
+        padding: 12px 0;
+        margin: 0 24px;
+        border: none;
+        outline: none;
+        background-color: unset;
+        font-size: 16px;
+        cursor: pointer;
+        color: #8e8e8e;
+    }
+    label {
+        height: 44px;
+        font-size: var(--font-size);
+        text-decoration: none;
+        color: inherit;
+        margin: 0;
+        border: none;
+        border-radius: 50px;
+        background-color: #F5F5F5FF;
+        box-shadow: inset -4px -4px 8px -4px rgba(0, 0, 0, 0.5), inset 4px 4px 8px -4px rgb(255, 255, 255), 0 0 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+        display: inline-block;
+    }
+    @media (prefers-color-scheme: dark) {
+        label {
+            background-color: #3A3A3AFF;
+            box-shadow: inset -4px -4px 8px -4px rgb(0, 0, 0), inset 4px 4px 8px -4px rgba(255, 255, 255, 0.8), 0 0 4px -1px rgb(255, 255, 255);
+        }
+    }
+    label:hover {
+        transform: scale(1.025);
+    }
+    label:focus-within {
+        outline: solid;
+    }
+</style>

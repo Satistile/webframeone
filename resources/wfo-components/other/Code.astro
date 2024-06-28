@@ -1,0 +1,28 @@
+---
+interface Props {
+    id: string;
+    class: string;
+}
+
+const { id, class:className } = Astro.props;
+---
+
+<span id={ id } class={ className }>
+    <slot />
+</span>
+<style>
+    span {
+        font-family: monospace;
+        overflow: auto;
+        padding: 0 8px 0 8px;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        opacity: 0.8;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        span {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+</style>

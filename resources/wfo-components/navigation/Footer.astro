@@ -1,0 +1,71 @@
+---
+import Panel from "../panel/Panel.astro";
+---
+
+<footer class="standard-padding">
+    <div>
+        <div>
+            <strong>Thanks for visiting!</strong>
+            <p>Current year © All Rights Reserved</p>
+        </div>
+        <Panel>
+            <a href="/public">Link 1</a>
+        </Panel>
+        <Panel>
+            <a href="/public">Link 2</a>
+            <a href="/public">Link 3</a>
+        </Panel>
+    </div>
+</footer>
+<style is:inline>
+    footer {
+        background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--footer-background) 100%);
+    }
+    footer > div {
+        display: flex;
+        gap: 64px;
+        padding-top: 128px;
+        padding-bottom: 64px;
+    }
+    footer a {
+        color: inherit;
+        text-decoration: none;
+        font-weight: normal;
+        transition: color 0.2s ease-in-out;
+        cursor: pointer;
+        opacity: 0.8;
+    }
+    footer a:hover {
+        background: var(--accent);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    footer > div > div {
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        justify-content: center;
+    }
+    footer > div > div:nth-child(1) > strong {
+        font-size: 1.2em;
+    }
+    footer > div > div:nth-child(1) > p {
+        margin: 0;
+        opacity: 0.8;
+        font-size: 0.8em;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        footer {
+            background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--footer-background) 100%);
+        }
+    }
+    @media screen and (max-width: 1500px) {
+        footer > div {
+            flex-direction: column;
+            gap: 32px;
+        }
+    }
+</style>

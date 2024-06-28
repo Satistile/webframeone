@@ -1,0 +1,21 @@
+---
+interface Props {
+    id: string;
+    class: string;
+}
+
+const { id, class:className } = Astro.props;
+---
+
+<div id={ id } class={ className }>
+    <slot />
+</div>
+<style>
+    div {
+        padding: 32px;
+        border-radius: 16px;
+        background: linear-gradient(175deg, var(--primary) 0%, var(--accent) 100%);
+        backdrop-filter: blur(16px);
+        box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4), inset 0 0 1px #FFFFFF;
+    }
+</style>

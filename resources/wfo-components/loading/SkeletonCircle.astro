@@ -1,0 +1,48 @@
+---
+interface Props {
+    id: string;
+    class: string;
+    diameter: string;
+}
+
+const { id, class:className, diameter } = Astro.props;
+---
+
+<div id={ id } class={ className }></div>
+<style define:vars={{ diameter }}>
+    div {
+        width: var(--diameter);
+        aspect-ratio: 1 / 1;
+        border-radius: 50px;
+        animation-duration: 2.5s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: pulse;
+        animation-timing-function: linear;
+    }
+    @keyframes pulse {
+        0% {
+            background-color: rgba(0, 0, 0, 0.1)
+        }
+        50% {
+            background-color: rgba(0, 0, 0, 0.2)
+        }
+        100% {
+            background-color: rgba(0, 0, 0, 0.1)
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        @keyframes pulse {
+            0% {
+                background-color: rgba(255, 255, 255, 0.1)
+            }
+            50% {
+                background-color: rgba(255, 255, 255, 0.2)
+            }
+            100% {
+                background-color: rgba(255, 255, 255, 0.1)
+            }
+        }
+    }
+</style>
