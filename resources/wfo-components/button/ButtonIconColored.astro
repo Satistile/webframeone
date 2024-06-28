@@ -1,0 +1,39 @@
+---
+interface Props {
+    id: string;
+    class: string;
+    color: string;
+    onclick: string;
+}
+
+const { id, class:className, color, onclick } = Astro.props;
+---
+
+<button id={ id } class={ className } onclick={ onclick }>
+    <slot />
+</button>
+
+<style define:vars={{ color }}>
+    button {
+        width: 44px;
+        height: 44px;
+        font-size: var(--font-size);
+        color: inherit;
+        cursor: pointer;
+        padding: 12px;
+        margin: 0;
+        border: none;
+        border-radius: 16px;
+        background-color: var(--color);
+        box-shadow: inset -4px -4px 8px -4px rgba(0, 0, 0, 0.4), inset 4px 4px 8px -4px rgb(255, 255, 255), 0 0 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+    }
+    @media (prefers-color-scheme: dark) {
+        button {
+            box-shadow: inset -4px -4px 8px -4px rgb(0, 0, 0), inset 4px 4px 8px -4px rgba(255, 255, 255, 0.8), 0 0 4px -1px rgb(255, 255, 255);
+        }
+    }
+    button:hover {
+        transform: scale(1.025);
+    }
+</style>

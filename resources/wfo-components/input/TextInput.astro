@@ -1,0 +1,40 @@
+---
+interface Props {
+    id: string;
+    class: string;
+    name: string;
+    placeholder: string;
+}
+
+const { id, class:className, name, placeholder } = Astro.props;
+---
+
+<label id={ id } class={ className }>
+    <input placeholder={ placeholder } name={ name } type="text">
+</label>
+<style>
+    label {
+        height: 20px;
+        display: inline-block;
+        border-radius: 50px;
+        box-shadow: inset 2px 2px 16px -8px #000000;
+        padding: 12px 24px 12px 24px;
+    }
+    label:focus-within {
+        outline: solid;
+    }
+    input {
+        background-color: unset;
+        border: none;
+        outline: unset;
+        display: inline-block;
+        appearance: none;
+        padding: 0;
+        color: var(--text);
+    }
+    @media (prefers-color-scheme: dark) {
+        label {
+            box-shadow: inset 0 0 16px -8px #ffffff;
+        }
+    }
+</style>

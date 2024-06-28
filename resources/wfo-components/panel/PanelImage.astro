@@ -1,0 +1,24 @@
+---
+interface Props {
+    id: string;
+    class: string;
+    href: string;
+}
+
+const { id, class:className, href } = Astro.props;
+---
+
+<div id={ id } class={ className }>
+    <slot />
+</div>
+<style define:vars={{ href }}>
+    div {
+        padding: 32px;
+        border-radius: 16px;
+        backdrop-filter: blur(16px);
+        box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4), inset 0 0 1px #FFFFFF;
+        background-image: var(--href);
+        background-size: cover;
+        background-position: center;
+    }
+</style>
