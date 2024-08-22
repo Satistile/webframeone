@@ -61,12 +61,20 @@ body {
     margin-left: 20%;
     margin-right: 20%;
 }
+.slim-padding {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.slim-margin {
+    margin-left: 40px;
+    margin-right: 40px;
+}
 @media screen and (max-width: 810px) {
-    .standard-padding {
+    .standard-padding, .slim-padding {
         padding-left: 20px;
         padding-right: 20px;
     }
-    .standard-margin {
+    .standard-margin, .slim-margin {
         margin-left: 20px;
         margin-right: 20px;
     }
@@ -96,16 +104,19 @@ a {
     margin: 8px 0 8px 0;
     text-align: justify;
     opacity: 0.8;
+    line-height: 1.6;
 }
 .format ul {
     margin: 8px 0 4px 0;
     padding-left: 32px;
     text-align: justify;
     opacity: 0.8;
+    line-height: 1.6;
 }
 .format ol {
     margin: 8px 0 4px 0;
     padding-left: 32px;
     text-align: justify;
     opacity: 0.8;
+    line-height: 1.6;
 }

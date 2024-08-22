@@ -23,8 +23,8 @@ const { id, class:className, href } = Astro.props;
         margin: 0;
         border: none;
         border-radius: 16px;
-        background-color: #ffffff;
-        box-shadow: inset -4px -4px 8px -4px rgba(0, 0, 0, 0.4), inset 4px 4px 8px -4px rgb(255, 255, 255), 0 0 8px rgba(0, 0, 0, 0.1);
+        background-color: #d3d3d3;
+        box-shadow: inset 10px 10px 32px -16px #FFFFFF;
         transition: transform 0.2s;
         display: inline-flex;
         justify-content: center;
@@ -33,7 +33,7 @@ const { id, class:className, href } = Astro.props;
     @media (prefers-color-scheme: dark) {
         a {
             background-color: #3A3A3AFF;
-            box-shadow: inset -4px -4px 8px -4px rgb(0, 0, 0), inset 4px 4px 8px -4px rgba(255, 255, 255, 0.8), 0 0 4px -1px rgb(255, 255, 255);
+            box-shadow: inset 10px 10px 32px -22px #FFFFFF;
         }
     }
     a:hover {
