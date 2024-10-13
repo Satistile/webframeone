@@ -18,7 +18,7 @@ body {
     :root {
         --text: #000000;
         --background: #f4f4f4;
-        --nav-background: #eeeeee;
+        --nav-background: #f4f4f4;
         --footer-background: rgba(16, 16, 16, 0.1);
         --primary: #6f18a5;
         --secondary: #ffdbf0;
@@ -30,7 +30,7 @@ body {
     :root {
         --text: #efefef;
         --background: #000000;
-        --nav-background: #232323;
+        --nav-background: #000000;
         --footer-background: rgb(16, 16, 16);
         --primary: #9e46e4;
         --secondary: #ffdbf0;
@@ -54,12 +54,12 @@ body {
     padding: 0;
 }
 .standard-padding {
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 .standard-margin {
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 .slim-padding {
     padding-left: 40px;
@@ -102,7 +102,7 @@ a {
 }
 .format p {
     margin: 8px 0 8px 0;
-    text-align: justify;
+    text-align: start;
     opacity: 0.8;
     line-height: 1.6;
 }

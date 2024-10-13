@@ -3,13 +3,10 @@
 ---
 
 <nav>
-    <div>
-        <button class="toggle" onclick="toggle()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
+    <button onclick="toggle()">
+        <span></span>
+        <span></span>
+    </button>
     <div>
         Navigation
     </div>
@@ -18,14 +15,21 @@
             <li><a href="/public">Home</a></li>
             <li><a href="/public">Page 2</a></li>
             <li>
-                <a tabindex="0" onclick="NavMenuOpen(this)">Page 3 with Menu</a>
-                <div>
-                    <button onclick="NavMenuClose(this)">
-                        <span></span>
-                        <span></span>
-                    </button><br>
-                    <h4>Menu</h4>
-                </div>
+                <a onclick="NavMenuOpen(this, event)" href="">Page 3 with Menu</a>
+                <ul>
+                    <li>
+                        <button onclick="NavMenuClose(this)">
+							<span>
+								<span></span>
+								<span></span>
+							</span>
+                            Zurück
+                        </button>
+                    </li>
+                    <li><a>Test 1</a></li>
+                    <li><a>Test 2</a></li>
+                    <li><a>Test 3</a></li>
+                </ul>
             </li>
         </ul>
     </div>
@@ -41,175 +45,172 @@
         top: 0;
         position: sticky;
         background-color: var(--bg-color);
-        height: 80px;
-        padding: 0 20%;
+        height: 4em;
+        padding: 0 15%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         isolation: isolate;
         z-index: 99;
-        transition: background-color 0.2s ease-in-out;
-    }
-    nav.top {
-        --bg-color: var(--background);
+        gap: 1.5em;
     }
     nav a {
         color: inherit;
         text-decoration: none;
-        font-weight: bold;
+        font-weight: 600;
         transition: color 0.2s ease-in-out;
         cursor: pointer;
     }
-
-    nav > div:nth-child(2) {
-        font-weight: bold;
-        font-size: 1.25em;
+    nav > button {
+        appearance: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25em;
+        cursor: pointer;
+        order: 1;
+        border: none;
+        background-color: unset;
     }
-
+    nav > button:focus {
+        outline: solid var(--text);
+        outline-offset: 0.125em;
+    }
+    nav > button > span {
+        display: inline-block;
+        width: 1.5em;
+        height: 0.25em;
+        background-color: var(--text);
+        border-radius: 16px;
+        transform-origin: right;
+        transition: transform 0.2s ease-in-out;
+    }
+    nav.open > button > span:nth-child(1) {
+        transform: translateY(-0.28em) rotate(-45deg);
+    }
+    nav.open > button > span:nth-child(2) {
+        transform: translateY(0.28em) rotate(45deg);
+    }
+    nav > div:nth-child(2) {
+        font-weight: 700;
+        font-size: 1.2em;
+    }
     nav > div:nth-child(3) > ul {
         list-style: none;
         padding: 0;
         margin: 0;
         display: flex;
-        gap: 64px;
+        gap: 4em;
+        opacity: 1;
     }
     nav > div:nth-child(3) > ul > li {
-        padding: 31px 0 31px 0;
+        padding: 1.5em 0 1.5em 0;
     }
-    nav > div:nth-child(3) > ul > li > div {
+    nav > div:nth-child(3) > ul > li > ul {
         position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
         left: 0;
         right: 0;
-        top: 80px;
+        top: 4em;
         background-color: var(--bg-color);
-        padding: 0 20% 32px 20%;
+        padding: 0 15% 2em 15%;
         transform: scale(1,0);
         transform-origin: top;
         transition: transform 0.2s ease-in-out 0.3s, background-color 0.2s ease-in-out;
+        list-style: none;
     }
-    nav > div:nth-child(3) > ul > li > div > * {
+    nav > div:nth-child(3) > ul > li > ul > li {
         opacity: 0;
         transition: opacity 0.1s ease-in-out 0.1s;
+        margin: 0;
     }
-    nav > div:nth-child(3) > ul > li > div > button {
-        appearance: none;
-        position: relative;
-        border: none;
-        cursor: pointer;
-        width: 30px; height: 28px;
-        background: unset;
-        margin-right: 4px;
-    }
-    nav > div:nth-child(3) > ul > li > div > button > span {
-        right: 0;
-        position: absolute;
-        height: 4px; width: 20px;
-        background: var(--text);
-        border-radius: 2px;
-        transition: 0.2s;
-        -webkit-transition: 0.2s;
-        transform-origin: center;
-    }
-    nav > div:nth-child(3) > ul > li > div > button > span:nth-child(1) { top: 0px; transform: rotate(45deg); }
-    nav > div:nth-child(3) > ul > li > div > button > span:nth-child(2) { top: 12px; transform: rotate(-45deg); }
-
-    nav > div:nth-child(1) {
-        order: 1;
+    nav > div:nth-child(3) > ul > li > ul > li > button {
+        margin-left: auto;
+        padding: 0;
+        color: var(--text);
         display: flex;
-        gap: 64px;
-    }
-    nav > div:nth-child(1) > button.toggle {
-        tab-index: 1;
+        align-items: center;
         cursor: pointer;
-        position: relative;
-        width: 30px; height: 28px;
         appearance: none;
         border: none;
-        background: unset;
+        background-color: unset;
+        font-size: 1em;
+        font-weight: 600;
+        gap: 0.75em;
+    }
+    nav > div:nth-child(3) > ul > li > ul > li > button > span {
+        display: flex;
+        gap: 0.75em;
+        flex-direction: column;
+    }
+    nav > div:nth-child(3) > ul > li > ul > li > button > span > span {
         display: inline-block;
+        width: 0.75em;
+        height: 0.2em;
+        background-color: var(--text);
+        transform-origin: right;
     }
-    nav > div:nth-child(1) > button.toggle > span {
-        right: 0;
-        position: absolute;
-        height: 4px; width: 30px;
-        background: var(--text);
-        border-radius: 2px;
-        transition: 0.2s;
-        -webkit-transition: 0.2s;
-        transform-origin: center;
+    nav > div:nth-child(3) > ul > li > ul > li > button > span > span:nth-child(1) {
+        transform: rotate(-45deg);
     }
-    nav > div:nth-child(1) > button.toggle > span:nth-child(1) { top: 0; }
-    nav > div:nth-child(1) > button.toggle > span:nth-child(2) { top: 10px; }
-    nav > div:nth-child(1) > button.toggle > span:nth-child(3) { top: 20px; }
-    nav.open > div:nth-child(1) > button.toggle > span:nth-child(1) {
-        transform: translateY(10px) rotate(-45deg);
+    nav > div:nth-child(3) > ul > li > ul > li > button > span > span:nth-child(2) {
+        transform: rotate(45deg);
     }
-    nav.open > div:nth-child(1) > button.toggle > span:nth-child(2) {
-        opacity: 0;
-    }
-    nav.open > div:nth-child(1) > button.toggle > span:nth-child(3) {
-        transform: translateY(-10px) rotate(45deg);
+    nav > div:nth-child(4) {
+        /*display: none;*/
     }
 
     @media screen and (min-width: 1301px) {
         nav a:hover {
-            background: var(--accent);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            color: var(--accent);
         }
-        nav > div:nth-child(3) > ul > li > div > button {
+        nav > button {
             display: none;
         }
-        nav > div:nth-child(3) > ul > li:hover > div, nav > div:nth-child(3) > ul > li:focus-within > div {
+        nav > div:nth-child(3) > ul > li > ul > li > button {
+            display: none;
+        }
+        nav > div:nth-child(3) > ul > li:hover > ul, nav > div:nth-child(3) > ul > li:focus-within > ul {
             transform: scale(1,1);
             transition: transform 0.2s ease-in-out;
         }
-        nav > div:nth-child(3) > ul > li:hover > div > *, nav > div:nth-child(3) > ul > li:focus-within > div > * {
+        nav > div:nth-child(3) > ul > li:hover > ul > li, nav > div:nth-child(3) > ul > li:focus-within > ul > li {
             opacity: 1;
             transition: opacity 0.2s ease-in-out 0.3s;
-        }
-        nav > div:nth-child(1) {
-            display: none;
         }
     }
     @media screen and (max-width: 1300px) {
         nav {
-            padding: 0 10%;
+            padding: 0 5%;
         }
         nav > div:nth-child(2) {
-            visibility: visible;
-            transition: opacity 0.2s ease-in-out 0.3s;
-        }
-        nav.open > div:nth-child(2) {
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.2s ease-in-out, visibility 0s 0.2s;
+            flex-grow: 1;
         }
         nav > div:nth-child(3) {
             visibility: hidden;
-            padding: 0 10%;
+            padding: 0 5%;
             position: fixed;
             right: 0;
             left: 0;
-            top: 80px;
+            top: 4em;
             bottom: 0;
             background-color: var(--bg-color);
-            transform: scale(0,1);
-            transform-origin: right;
+            transform: scale(1,0);
+            transform-origin: top;
             transition: transform 0.2s ease-in-out 0.3s, background-color 0.2s ease-in-out, visibility 0s 0.5s;
         }
         nav.open > div:nth-child(3) {
             visibility: initial;
+            transform: scale(1,1);
             transition: transform 0.2s ease-in-out, visibility 0s;
         }
-        nav.open > div:nth-child(3) {
-            transform: scale(1,1);
-        }
         nav > div:nth-child(3) > ul {
+            overflow: auto;
+            max-height: calc(100dvh - 3em);
             flex-direction: column;
-            gap: 0;
+            gap: 1em;
             opacity: 0;
             text-align: right;
             transition: opacity 0.2s ease-in-out;
@@ -220,45 +221,33 @@
         }
         nav > div:nth-child(3) > ul > li {
             display: block;
-            margin: 10px 0;
-            font-size: 20px;
+            margin: 0;
             padding: 0;
         }
-        nav > div:nth-child(3) >ul > li > div {
+        nav > div:nth-child(3) >ul > li > ul {
+            overflow: auto;
+            max-height: calc(100dvh - 3em);
+            gap: 1em;
             visibility: hidden;
             inset: 0;
-            padding: 0 10%;
-            transform: scale(0,1);
-            transform-origin: right;
+            padding: 0 5%;
+            transform: scale(1,0);
+            transform-origin: top;
             transition: transform 0.2s ease-in-out 0.3s, visibility 0s 0.5s;
         }
-        nav > div:nth-child(3) > ul > li > div > * {
+        nav > div:nth-child(3) > ul > li > ul > * {
             display: unset;
             opacity: 0;
             transition: opacity 0.2s ease-in-out;
         }
-        nav > div:nth-child(3) > ul > li > div.active {
+        nav > div:nth-child(3) > ul > li > ul.open {
             visibility: initial;
             transform: scale(1,1);
             transition: transform 0.2s ease-in-out, visibility 0s;
         }
-        nav > div:nth-child(3) > ul > li > div.active > * {
+        nav > div:nth-child(3) > ul > li > ul.open > * {
             opacity: 1;
             transition: opacity 0.2s ease-in-out 0.3s;
-        }
-        nav > div:nth-child(4) {
-            visibility: hidden;
-            opacity: 0;
-            transition: 0.2s ease-in-out, visibility 0s 0.2s;
-            position: absolute;
-        }
-        nav.open > div:nth-child(4) {
-            visibility: visible;
-            opacity: 1;
-            transition: 0.2s ease-in-out 0.3s;
-        }
-        nav > div:nth-child(1) {
-            display: unset;
         }
     }
 </style>
@@ -267,26 +256,11 @@
         document.querySelector('nav').classList.toggle('open');
     }
 
-    function NavMenuOpen(element) {
-        parent = element.parentElement;
-        parent.querySelector('div').classList.add('active');
+    function NavMenuOpen(element, e) {
+        e.preventDefault();
+        element.parentElement.querySelector('ul').classList.add('open');
     }
     function NavMenuClose(element) {
-        element.parentElement.classList.remove('active');
+        element.parentElement.parentElement.classList.remove('open');
     }
-
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.querySelector('nav').classList.remove('top');
-        } else {
-            document.querySelector('nav').classList.add('top');
-        }
-    }
-
-    scrollFunction();
-    document.addEventListener('astro:after-swap', () => {
-        scrollFunction();
-    });
 </script>
