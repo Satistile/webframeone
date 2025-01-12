@@ -14,15 +14,15 @@ class wfo {
             entries.forEach(entry => {
                 const rect = entry.boundingClientRect;
                 if (!entry.isIntersecting && (rect.bottom > window.innerHeight) && entry.target.classList.contains('visible')) {
-                    // Das Element hat den Bildschirm verlassen (oben oder unten)
+                    // element left the screen
                     entry.target.classList.remove('visible');
                 } else if (entry.isIntersecting && !entry.target.classList.contains('visible')) {
-                    // Das Element ist im sichtbaren Bereich
+                    // element is visible
                     entry.target.classList.add('visible');
                 }
             });
         }, {
-            threshold: 0.05 // Z.B. 10% des Elements müssen sichtbar sein
+            threshold: 0.05 // for example 5% of the element must be visible
         });
 
         elements.forEach(element => {
